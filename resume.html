@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title></title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Huijuan Zhang</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="resume.html">Resume</a>
+</li>
+<li>
+  <a href="mailto:&lt;huijuanzhang13@gmail.com&gt;">
+    <span class="fa fa-envelope fa-lg"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="http://github.com/HuijuanZhang/">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore"><center>
+Resume
+</center></h1>
+
+</div>
+
+
+<hr />
+<div id="education" class="section level3">
+<h3>Education</h3>
+<p align="right">
+New York City, US | Sep 2017 - Present
+</p>
+<p><strong>Columbia University</strong>, <em>Mailman School of Public Health</em></p>
+<p>Biostatistics, <em>Master of Science</em>, expected May 2019</p>
+<ul>
+<li><strong>On-working courses</strong>: Data Science I (Using R), Biostatistical Methods I, Probability, Principles of Epidemiology.</li>
+</ul>
+<p align="right">
+Shanghai, China | Sep 2013 - June 2017
+</p>
+<p><strong>Fudan University</strong>, <em>Department of Chemistry</em></p>
+<p>Chemistry, <em>Bachelor of Science</em></p>
+<ul>
+<li><p><strong>Honors and Awards</strong>: Excellent Student of Fudan University, 2013-2014; Third Prize of Excellent Undergraduate Scholarship, etc.</p></li>
+<li><p><strong>Relevant Courses</strong>: Python Programming, C Programming, Advanced Mathematics, Probability Theory and Mathematical Statistics, etc.</p></li>
+<li><p><strong>Publications</strong>:</p>
+<ul>
+<li><p>Jie Pan, Hong Yuan, Xiaoxue Zhang, <strong>Huijuan Zhang</strong>, Qiming Xu, Yajun Zhou, Zhongxian Huang, Xiangshi Tan. Probing the Molecular Mechanism of Human Soluble Guanylate Cyclase Activation by NO in vitro and in vivo. <em>Sci. Rep</em>. <strong>7</strong>, 43112 (2017).</p></li>
+<li><p>Jie Pan, Xiaoxue Zhang, Hong Yuan, Qiming Xu, <strong>Huijuan Zhang</strong>, Yajun Zhou, Zhong-Xian Huang, Xiangshi Tan. The molecular mechanism of heme loss from oxidized soluble guanylate cyclase induced by conformational change. <em>Biochim Biophys Acta</em> <strong>1864</strong>, 488–500 (2016).</p></li>
+</ul></li>
+</ul>
+<hr />
+</div>
+<div id="programming-experience" class="section level3">
+<h3>Programming Experience</h3>
+<p align="right">
+Shanghai, China | May 2017
+</p>
+<p><strong>Python Programming Course Project</strong>, <em>Text Generation Based on Markov Process</em></p>
+<ul>
+<li>Analyzed an English text to generate a dictionary with sequence and frequency of words by splitting character strings and extracting words successively. Randomly generated a new text with correct grammar and semantics using the dictionary.</li>
+</ul>
+<hr />
+</div>
+<div id="internship-experience" class="section level3">
+<h3>Internship Experience</h3>
+<p align="right">
+Shanghai, China | Oct 2016 - Nov 2016
+</p>
+<p><strong>Shanghai JiaoFu Biomedical Technology Co., Ltd</strong>, <em>Network Meta-Analysis</em></p>
+<ul>
+<li><p>Searched project relevant meta-analysis documents through databases such as PubMed and Embase by medical subject headings and entry terms. Retrieved studies included in the meta-analysis documents and added other latest studies as a complement.</p></li>
+<li><p>Extracted data from Randomized Controlled Trials and reorganized it. Employed GeMTC to get Consistency Model and Rank Probability. Used GraphPad Prism to attain graphs of SUCRA with Cumulative Probability. Obtained Network Plots, Forest Plots and Node-Splitting Plots from R (with RStudio). Applied STATA to get Funnel plots and perfected the graphs by AI.</p></li>
+<li><p>Described the results obtained from data analysis and wrote a discussion of it.</p></li>
+</ul>
+<hr />
+</div>
+<div id="research-experience" class="section level3">
+<h3>Research Experience</h3>
+<p align="right">
+Jerusalem, Israel | Jul 2016 - Aug 2016
+</p>
+<p><strong>2016 Summer Research</strong>, University of Hebrew, <em>upervisor: Dr. Einav Gross</em></p>
+<p><strong>Project</strong>: Single Nucleotide Polymorphism (SNP) mapping of three mutants of <em>C. elegans</em></p>
+<ul>
+<li><p>Operated with model organism <em>C. elegans</em>, including maintenance, heat shock, crossing and bordering assay. Selected SNPs and designed primers for mapping. Examined the positions of the mutations. Applied different methods including further interval mapping, sequencing and fluorescence detection to different mutants according to initial results.</p></li>
+<li><p>Analyzed the results of each step through calculation, alignment and comparison with several databases.</p></li>
+</ul>
+<p align="right">
+Shanghai, China | Dec 2014 – Jun 2017
+</p>
+<p><strong>The Student Scientific Innovation Act</strong>, Fudan University, <em>Supervisor: Prof. Xiangshi Tan</em></p>
+<p><strong>Project</strong>: Molecular Mechanism of Heme Loss from Oxidized Soluble Guanylate Cyclase Induced by Conformational Change</p>
+<ul>
+<li><p>Performed transformation to get E. coli colonies with recombinant bacmid. Transfected and amplified baculovirus stock. Trial-expressed protein and assayed the expression product. Expressed and characterized recombinant protein by Spodoptera frugiperda 9 cells.</p></li>
+<li><p>Published two papers as a co-author.</p></li>
+</ul>
+<p align="right">
+College Station, US | Aug 2015
+</p>
+<p><strong>2015 Summer Research</strong>, Texas A&amp;M University, <em>Supervisor: Prof. Guan Zhu</em></p>
+<p><strong>Project</strong>: Gene Knockout of <em>Clostridium difficile</em></p>
+<ul>
+<li>Applied CRISPR-Cas 9 system to knockout specific gene. Identified the gene positions of Acs/CODH and designed gRNA. Selected resistance marker to construct DNA editing templates. Designed primers for PCR by Primer-BLAST, ePrime and Beacon Designer.</li>
+</ul>
+<hr />
+</div>
+<div id="leadership-and-extracurricular-activities" class="section level3">
+<h3>Leadership and Extracurricular Activities</h3>
+<p align="right">
+Shanghai, China | Sep 2013 - Jul 2015
+</p>
+<p><strong>Organization Department, Youth League Committee, Fudan University</strong>, Assistant Minister</p>
+<ul>
+<li>Organized the Annual Conference of Excellent Student Assessment, Fudan University and the Annual China’s Youth Awarding Ceremony, Fudan University. Managed daily routine in Organization Department.</li>
+</ul>
+<hr />
+</div>
+<div id="skills" class="section level3">
+<h3>Skills</h3>
+<p>Currently learning R programming; Some knowledge of Python programming, C programming; Strong knowledge of MS Office (Word, Excel, PowerPoint). Chinese (Native).</p>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

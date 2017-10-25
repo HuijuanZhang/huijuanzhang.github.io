@@ -3,11 +3,13 @@ output_dir: "."
 navbar:
   title: "Huijuan Zhang"
   right:
-    - text: "About"
-      href: about.html
+    - text: "Resume"
+      href: resume.html
     - icon: fa-envelope fa-lg
-      href: mailto:<you@youremail.com>
+      href: mailto:<huijuanzhang13@gmail.com>
     - icon: fa-github fa-lg
-      href: http://github.com/<YOUR_GH_NAME>/
+      href: http://github.com/HuijuanZhang/
 output:
-  html_document
+  html_document: 
+    toc: true
+    toc_float: true

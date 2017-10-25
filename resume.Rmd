@@ -1,0 +1,97 @@
+---
+title: <center>Resume</center>
+---
+
+***
+### Education
+<p align="right">New York City, US | Sep 2017 - Present</p>
+
+__Columbia University__, _Mailman School of Public Health_
+
+Biostatistics, _Master of Science_, expected May 2019
+
+* __On-working courses__: Data Science I (Using R), Biostatistical Methods I, Probability, Principles of Epidemiology.
+
+<p align="right">Shanghai, China | Sep 2013 - June 2017</p>
+
+__Fudan University__, _Department of Chemistry_
+
+Chemistry, _Bachelor of Science_
+
+* __Honors and Awards__: Excellent Student of Fudan University, 2013-2014; Third Prize of Excellent Undergraduate Scholarship, etc.
+
+* __Relevant Courses__: Python Programming, C Programming, Advanced Mathematics, Probability Theory and Mathematical Statistics, etc.
+
+* __Publications__:
+
+    + Jie Pan, Hong Yuan, Xiaoxue Zhang, __Huijuan Zhang__, Qiming Xu, Yajun Zhou, Zhongxian Huang, Xiangshi Tan. Probing the Molecular Mechanism of Human Soluble Guanylate Cyclase Activation by NO in vitro and in vivo. _Sci. Rep_. __7__, 43112 (2017).
+
+    + Jie Pan, Xiaoxue Zhang, Hong Yuan, Qiming Xu, __Huijuan Zhang__, Yajun Zhou, Zhong-Xian Huang, Xiangshi Tan. The molecular mechanism of heme loss from oxidized soluble guanylate cyclase induced by conformational change. _Biochim Biophys Acta_ __1864__, 488–500 (2016).
+
+***
+### Programming Experience
+<p align="right">Shanghai, China | May 2017</p>
+
+__Python Programming Course Project__, _Text Generation Based on Markov Process_
+
+* Analyzed an English text to generate a dictionary with sequence and frequency of words by splitting character strings and extracting words successively. Randomly generated a new text with correct grammar and semantics using the dictionary.
+
+***
+### Internship Experience
+<p align="right">Shanghai, China | Oct 2016 - Nov 2016</p>
+
+__Shanghai JiaoFu Biomedical Technology Co., Ltd__, _Network Meta-Analysis_
+
+* Searched project relevant meta-analysis documents through databases such as PubMed and Embase by medical subject headings and entry terms. Retrieved studies included in the meta-analysis documents and added other latest studies as a complement.
+
+* Extracted data from Randomized Controlled Trials and reorganized it. Employed GeMTC to get Consistency Model and Rank Probability. Used GraphPad Prism to attain graphs of SUCRA with Cumulative Probability. Obtained Network Plots, Forest Plots and Node-Splitting
+Plots from R (with RStudio). Applied STATA to get Funnel plots and perfected the graphs by AI.
+
+* Described the results obtained from data analysis and wrote a discussion of it.
+
+***
+### Research Experience
+<p align="right">Jerusalem, Israel | Jul 2016 - Aug 2016</p>
+
+__2016 Summer Research__, University of Hebrew, _upervisor: Dr. Einav Gross_
+
+__Project__: Single Nucleotide Polymorphism (SNP) mapping of three mutants of _C. elegans_
+
+* Operated with model organism _C. elegans_, including maintenance, heat shock, crossing and bordering assay. Selected SNPs and
+designed primers for mapping. Examined the positions of the mutations. Applied different methods including further interval mapping,
+sequencing and fluorescence detection to different mutants according to initial results.
+
+* Analyzed the results of each step through calculation, alignment and comparison with several databases.
+
+<p align="right">Shanghai, China | Dec 2014 – Jun 2017</p>
+
+__The Student Scientific Innovation Act__, Fudan University, _Supervisor: Prof. Xiangshi Tan_
+
+__Project__: Molecular Mechanism of Heme Loss from Oxidized Soluble Guanylate Cyclase Induced by Conformational Change
+
+* Performed transformation to get E. coli colonies with recombinant bacmid. Transfected and amplified baculovirus stock. Trial-expressed protein and assayed the expression product. Expressed and characterized recombinant protein by Spodoptera frugiperda 9 cells.
+
+* Published two papers as a co-author.
+
+<p align="right">College Station, US | Aug 2015</p>
+
+__2015 Summer Research__, Texas A&M University, _Supervisor: Prof. Guan Zhu_
+
+__Project__: Gene Knockout of _Clostridium difficile_
+
+* Applied CRISPR-Cas 9 system to knockout specific gene. Identified the gene positions of Acs/CODH and designed gRNA. Selected
+resistance marker to construct DNA editing templates. Designed primers for PCR by Primer-BLAST, ePrime and Beacon Designer.
+
+***
+### Leadership and Extracurricular Activities
+<p align="right">Shanghai, China | Sep 2013 - Jul 2015</p>
+
+__Organization Department, Youth League Committee, Fudan University__, Assistant Minister
+
+* Organized the Annual Conference of Excellent Student Assessment, Fudan University and the Annual China’s Youth Awarding Ceremony,
+Fudan University. Managed daily routine in Organization Department.
+
+***
+### Skills
+
+Currently learning R programming; Some knowledge of Python programming, C programming; Strong knowledge of MS Office (Word, Excel, PowerPoint). Chinese (Native).
