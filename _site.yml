@@ -11,6 +11,5 @@ navbar:
       href: http://github.com/HuijuanZhang/
 output:
   html_document:
-    theme: cosmo
     highlight: textmate
     css: styles.css
