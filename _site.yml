@@ -10,6 +10,7 @@ navbar:
     - icon: fa-github fa-lg
       href: http://github.com/HuijuanZhang/
 output:
-  html_document: 
-    toc: true
-    toc_float: true
+  html_document:
+    theme: cosmo
+    highlight: textmate
+    css: styles.css

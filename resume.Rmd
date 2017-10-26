@@ -1,5 +1,7 @@
 ---
 title: <center>Resume</center>
+output:
+  html_document
 ---
 
 ***

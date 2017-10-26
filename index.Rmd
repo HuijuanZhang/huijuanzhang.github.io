@@ -2,7 +2,10 @@
 title: "Huijuan Zhang"
 ---
 
-It's a product of Data Science I homework 4!
+#### _MS Candidate in Biostatistics at Columbia University_
 
-<img src="images/photo.jpeg" style="width:50%">
+<br><br>
+<center><img src="images/photo.jpeg" style="width:50%"></center>
+<br><br>
 
+##### I received BS in chemistry in [Fudan University](http://www.fudan.edu.cn/en/) in 2017 and now am a first year student majoring in biostatistics in [Columbia University, Mailman School of Public Health](https://www.mailman.columbia.edu).
