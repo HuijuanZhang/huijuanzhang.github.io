@@ -6,13 +6,13 @@ output:
 
 ***
 ### Education
-<p align="right">New York City, US | Sep 2017 - Present</p>
+<p align="right">New York, NY | May 2019</p>
 
 __Columbia University__, _Mailman School of Public Health_
 
-Biostatistics, _Master of Science_, expected May 2019
+Biostatistics, _Master of Science_
 
-* __On-working courses__: Data Science I (Using R), Biostatistical Methods I, Probability, Principles of Epidemiology.
+* __Relevant courses__: Data Science I (Using R), Biostatistical Methods I. Biostatistical Methods II (Generalized Linear Models, Survival Analysis), Statistical Machine Learning (Using Python), Pharmaceutical Statistics (Using SAS), etc. (Spring 2018)
 
 <p align="right">Shanghai, China | Sep 2013 - June 2017</p>
 
