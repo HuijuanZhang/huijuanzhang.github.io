@@ -11,7 +11,7 @@
 
 
 
-<title></title>
+<title>resume.utf8</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,8 +20,8 @@
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 <link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
 
 <style type="text/css">code{white-space: pre;}</style>
@@ -31,10 +31,12 @@
   }
 </style>
 <script type="text/javascript">
-if (window.hljs && document.readyState && document.readyState === "complete") {
-   window.setTimeout(function() {
-      hljs.initHighlighting();
-   }, 0);
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
 }
 </script>
 
@@ -67,6 +69,7 @@ h6 {
 }
 </style>
 
+<link rel="stylesheet" href="styles.css" type="text/css" />
 
 </head>
 
@@ -214,12 +217,12 @@ Resume
 <div id="education" class="section level3">
 <h3>Education</h3>
 <p align="right">
-New York City, US | Sep 2017 - Present
+New York, NY | May 2019
 </p>
 <p><strong>Columbia University</strong>, <em>Mailman School of Public Health</em></p>
-<p>Biostatistics, <em>Master of Science</em>, expected May 2019</p>
+<p>Biostatistics, <em>Master of Science</em></p>
 <ul>
-<li><strong>On-working courses</strong>: Data Science I (Using R), Biostatistical Methods I, Probability, Principles of Epidemiology.</li>
+<li><strong>Relevant courses</strong>: Data Science I (Using R), Biostatistical Methods I. Biostatistical Methods II (Generalized Linear Models, Survival Analysis), Statistical Machine Learning (Using Python), Pharmaceutical Statistics (Using SAS), etc. (Spring 2018)</li>
 </ul>
 <p align="right">
 Shanghai, China | Sep 2013 - June 2017
